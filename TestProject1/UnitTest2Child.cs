@@ -13,6 +13,7 @@ namespace TestProject1
         Assert.AreEqual(expected, s.Length);
         }
 
+        //[Ignore("")]
         [TestCase(0)]
         [TestCase(100)]
         public void TestForFindEmployeeDetails(int id)

@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestPlatform.TestHost;
 namespace TestProject1
 {
     [TestFixture]
-    public class TestsForEmployeesOperations
+    public class TestsForEmployeesOperationsBasic
     {
         Program p = null;
         

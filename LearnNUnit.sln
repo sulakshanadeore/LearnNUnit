@@ -4,10 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitDemo", "NUnitDemo\NUnitDemo.csproj", "{37187F5A-4969-479B-96CF-9DC9EA085B5E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5AB60793-EC0D-4AA6-9B91-41F45D75A2A1} = {5AB60793-EC0D-4AA6-9B91-41F45D75A2A1}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRLibrary", "HRLibrary\HRLibrary.csproj", "{5AB60793-EC0D-4AA6-9B91-41F45D75A2A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{D7A43798-08B6-40D4-9113-7D695B9B6C14}"
+	ProjectSection(ProjectDependencies) = postProject
+		{37187F5A-4969-479B-96CF-9DC9EA085B5E} = {37187F5A-4969-479B-96CF-9DC9EA085B5E}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

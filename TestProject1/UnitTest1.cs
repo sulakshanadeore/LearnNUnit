@@ -6,10 +6,13 @@ namespace TestProject1
     [TestFixture]
     public class TestsForEmployeesOperations
     {
-        //[SetUp]
-        //public void Setup()
-        //{
-        //}
+        Program p = null;
+        
+        [SetUp]
+        public void Setup()
+        {
+            p = new Program();
+        }
 
         //[Test]
         //public void TestForAdminLogin()
@@ -43,7 +46,7 @@ namespace TestProject1
         [Test]
         public void TestForLogin()
         { 
-        Program p=new Program();
+        
             string wrongUseridPassword=p.CheckLogin("Ajit", "Ajit");
             string correctUseridPassword = p.CheckLogin("Admin", "Admin");
             string isemptydata = p.CheckLogin("", "");
@@ -52,6 +55,28 @@ namespace TestProject1
             Assert.AreEqual(wrongUseridPassword, "Incorrect userid/password");
             Assert.AreEqual(isemptydata, "Userid or password cannot be empty or null");
 
+        }
+        [TestCase(1)]
+        [TestCase(2)]
+        [TestCase(6)]
+
+        public void TestForFindEmployeeDetails(int id)
+        {
+            string empdet=null;
+            try
+            {
+                 empdet = p.FindEmpByID(id);
+
+                Assert.AreEqual(empdet, empdet);
+            }
+            catch (Exception ex)
+            {
+
+                Assert.AreEqual(empdet, "Object reference not set to instance of an object");
+            }
+            ;
+        
+        
         }
 
 

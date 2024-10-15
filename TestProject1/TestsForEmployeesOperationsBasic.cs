@@ -43,7 +43,7 @@ namespace TestProject1
 
         //}
 
-        [Test]
+        [Test,Order(2)]
         public void TestForLogin()
         { 
         
@@ -52,10 +52,13 @@ namespace TestProject1
             string isemptydata = p.CheckLogin("", "");
 
             Assert.AreEqual(correctUseridPassword, "Welcome Admin");
-            Assert.AreEqual(wrongUseridPassword, "Incorrect userid/password");
+            //  Assert.That(wrongUseridPassword, "Incorrect userid/password");
+            Assert.That("wrongUseridPassword",Is.EqualTo("Incorrect userid/password"));
             Assert.AreEqual(isemptydata, "Userid or password cannot be empty or null");
 
         }
+
+        [Test,Order(1)] 
         [TestCase(1)]
         [TestCase(2)]
         [TestCase(6)]
